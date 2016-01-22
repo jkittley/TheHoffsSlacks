@@ -19,7 +19,7 @@
   "dependencies": {
     "express": ">= 4.x.x",
     "body-parser": ">= 1.x.x",
-    "twitter": ">= 1.x.x",
+    "twitter": ">= 1.x.x"
   },
   "license": "ISC",
   "bugs": {
