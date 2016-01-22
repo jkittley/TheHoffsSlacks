@@ -1,0 +1,28 @@
+{
+  "name": "slackHoffBot",
+  "version": "1.0.0",
+  "description": "Slack Bot for the Hoff",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkittley/TheHoffsSlacks.git"
+  },
+  "keywords": [
+    "Slack",
+    "Hoff",
+    "Bot"
+  ],
+  "author": "Jacob Kittley-Davies",
+  "dependencies": {
+    "express": ">= 4.x.x",
+    "body-parser": ">= 1.x.x"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkittley/TheHoffsSlacks/issues"
+  },
+  "homepage": "https://github.com/jkittley/TheHoffsSlacks"
+}
