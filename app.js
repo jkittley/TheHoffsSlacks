@@ -8,8 +8,6 @@ var hoff = require('./hoff');
 // body parser middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// test route
-app.get('/', function (req, res) { res.status(200).send('Hello world!') });
 
 // error handler
 app.use(function (err, req, res, next) {
@@ -22,3 +20,6 @@ app.listen(port, function () {
 });
 
 app.post('/hoff', hoff);
+app.get('/hoff', hoff);
+
+app.get('/', function (req, res) { res.status(200).send('Hoff world!') });

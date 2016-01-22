@@ -7,21 +7,21 @@ module.exports = function (req, res, next) {
   var guess = req.body.text;
 
   // Connect to twitter
-  var Twitter = require('twitter');
-  var client = new Twitter({
-    consumer_key: process.env.twitter_consumer_key,
-    consumer_secret: process.env.twitter_consumer_secret,
-    access_token_key: process.env.twitter_access_token_key,
-    access_token_secret: process.env.twitter_access_token_secret
-  });
+  // var Twitter = require('twitter');
+  // var client = new Twitter({
+  //   consumer_key: process.env.twitter_consumer_key,
+  //   consumer_secret: process.env.twitter_consumer_secret,
+  //   access_token_key: process.env.twitter_access_token_key,
+  //   access_token_secret: process.env.twitter_access_token_secret
+  // });
 
-  // Post message to twitter
-  var twitter_string = 'Slack user: ' + userName + ' suggested: '+ guess;
-  client.post('statuses/update', { status: twitter_string },  function(error, tweet, response){
-    if(error) throw error;
-    console.log(tweet);  // Tweet body. 
-    console.log(response);  // Raw response object. 
-  });
+  // // Post message to twitter
+  // var twitter_string = 'Slack user: ' + userName + ' suggested: '+ guess;
+  // client.post('statuses/update', { status: twitter_string },  function(error, tweet, response){
+  //   if(error) throw error;
+  //   console.log(tweet);  // Tweet body. 
+  //   console.log(response);  // Raw response object. 
+  // });
 
   // avoid infinite loop
   if (userName !== 'slackbot') {
