@@ -9,6 +9,7 @@ module.exports = function (req, res, next) {
 
   // Connect to twitter
   var Twitter = require('twitter');
+ 
   var client = new Twitter({
     consumer_key: process.env.twitter_consumer_key,
     consumer_secret: process.env.twitter_consumer_secret,
@@ -19,9 +20,10 @@ module.exports = function (req, res, next) {
   // // Post message to twitter
   var twitter_string = 'The Slack user: ' + userName + ' suggested: '+ guess;
   client.post('statuses/update', { status: twitter_string },  function(error, tweet, response){
-    if(error) throw error;
-    console.log(tweet);  // Tweet body. 
-    console.log(response);  // Raw response object. 
+    //if(error) throw error;
+    // console.log(tweet);  // Tweet body. 
+    // console.log(response);  // Raw response object. 
+    botPayload.text = "Oh my Hoff, something went wrong in Twitter town!";
   });
 
   // avoid infinite loop
